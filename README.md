@@ -1,8 +1,8 @@
-#  Spotify Vibe Classifier
+# 🎧 Spotify Vibe Classifier
 
-Machine learning project buat **ngelompokin lagu berdasarkan vibes**, bukan genre.
+A machine learning project to **classify songs based on vibes**, not genres.
 
-Daripada cuma "pop", "rock", dll — project ini fokus ke **feeling dari lagunya**:
+Instead of just labeling songs as "pop", "rock", etc., this project focuses on the **feeling of the music**:
 
 * Energetic
 * Party
@@ -12,21 +12,21 @@ Daripada cuma "pop", "rock", dll — project ini fokus ke **feeling dari lagunya
 
 ## 🚀 Overview
 
-Project ini menggunakan **audio features dari Spotify** untuk mengelompokkan lagu ke dalam beberapa cluster menggunakan **KMeans Clustering**.
+This project uses **Spotify audio features** to group songs into clusters using **KMeans Clustering**.
 
-Output akhirnya berupa **segment/vibe** dari lagu tersebut.
+The final output is a **vibe/segment classification** for each song.
 
 ---
 
 ## 🧠 How It Works
 
-1. Ambil audio features lagu dari Spotify
-2. Normalize data pakai scaler
-3. Masukin ke model KMeans
-4. Model assign ke cluster tertentu
-5. Cluster dikonversi jadi **vibe label**
+1. Extract audio features from Spotify
+2. Normalize the data using a scaler
+3. Feed the data into a KMeans model
+4. The model assigns the song to a cluster
+5. The cluster is mapped into a **vibe label**
 
-Mapping cluster:
+### Cluster Mapping
 
 | Cluster ID | Vibe      |
 | ---------- | --------- |
@@ -38,7 +38,7 @@ Mapping cluster:
 
 ## 🎼 Features Used
 
-Model pakai fitur audio dari Spotify:
+The model uses the following Spotify audio features:
 
 * danceability
 * energy
@@ -49,8 +49,6 @@ Model pakai fitur audio dari Spotify:
 * liveness
 * valence
 * tempo
-
----
 
 ---
 
@@ -78,7 +76,7 @@ Health check endpoint
 
 ### 🔹 POST `/predict`
 
-Predict vibe dari lagu berdasarkan audio features
+Predict the vibe of a song based on its audio features
 
 **Request**
 
@@ -134,11 +132,13 @@ pip install flask pandas scikit-learn joblib
 python app.py
 ```
 
-Server akan jalan di:
+The server will run at:
 
 ```
 http://127.0.0.1:5000
 ```
+
+---
 
 ## 🧪 Example Test
 
@@ -152,37 +152,37 @@ curl -X POST http://127.0.0.1:5000/predict \
 
 ## 📊 Dataset Notes
 
-Dataset dibuat dari:
+The dataset is built from:
 
-* 🎧 Playlist lagu yang disukai
-* 🚫 Playlist lagu yang tidak disukai
-* 📈 Audio features dari Spotify API
+* 🎧 Songs that are liked
+* 🚫 Songs that are disliked
+* 📈 Spotify audio features
 
-Jadi model ini bukan genre classifier biasa, tapi lebih ke:
+This means the model is not a traditional genre classifier, but rather:
 
-> **"Ini lagu vibes-nya kayak gimana?"**
+> **"What vibe does this song give?"**
 
 ---
 
 ## 🤔 Why This Project?
 
-Kadang kita nyari lagu bukan berdasarkan genre, tapi:
+Sometimes we don’t look for music by genre, but by mood:
 
-* "lagi pengen chill"
-* "lagi pengen party"
-* "lagi butuh energy"
+* “I want something chill”
+* “I need party vibes”
+* “I need energy”
 
-Project ini bantu ngejawab itu dengan pendekatan data.
+This project aims to answer that using a data-driven approach.
 
 ---
 
 ## 🔮 Future Improvements
 
-* 🎯 Label cluster lebih akurat (auto-labeling)
-* 📊 Visualisasi cluster (PCA / t-SNE)
-* 🎵 Input langsung dari Spotify track ID
+* 🎯 Better cluster labeling (auto-labeling)
+* 📊 Cluster visualization (PCA / t-SNE)
+* 🎵 Input using Spotify track ID
 * 📦 Batch prediction
-* ☁️ Deploy ke cloud (Render / Railway / AWS)
+* ☁️ Cloud deployment (Render / Railway / AWS)
 
 ---
 
@@ -196,13 +196,12 @@ Project ini bantu ngejawab itu dengan pendekatan data.
 
 ---
 
-
 ## 👀 Notes
 
-Project ini masih eksploratif, jadi:
+This project is still experimental, so:
 
-* hasil cluster bisa berubah tergantung dataset
-* vibe = interpretasi, bukan kebenaran absolut 😄
+* results may vary depending on the dataset
+* vibe classification is subjective, not absolute 
 
 ---
 
