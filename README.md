@@ -147,23 +147,26 @@ curl -X POST http://127.0.0.1:5000/predict \
 -H "Content-Type: application/json" \
 -d @data.json
 ```
+## 📊 Dataset
 
----
+The dataset used in this project is derived from **Spotify audio features**.
 
-## 📊 Dataset Notes
+- Primary data source: Spotify Web API  
+- Additional references: Public datasets available on Kaggle  
 
-The dataset is built from:
+The dataset includes features such as:
 
-* 🎧 Songs that are liked
-* 🚫 Songs that are disliked
-* 📈 Spotify audio features
+- danceability  
+- energy  
+- loudness  
+- speechiness  
+- acousticness  
+- instrumentalness  
+- liveness  
+- valence  
+- tempo  
 
-This means the model is not a traditional genre classifier, but rather:
-
-> **"What vibe does this song give?"**
-
----
-
+These features are used to perform clustering and group songs into different vibe categories.
 ## 🤔 Why This Project?
 
 Sometimes we don’t look for music by genre, but by mood:
