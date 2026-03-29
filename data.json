@@ -1,0 +1,11 @@
+{
+  "danceability": 0.30,
+  "energy": 0.09,
+  "loudness": -21.3,
+  "speechiness": 0.03,
+  "acousticness": 0.97,
+  "instrumentalness": 0.88,
+  "liveness": 0.12,
+  "valence": 0.10,
+  "tempo": 99
+}
