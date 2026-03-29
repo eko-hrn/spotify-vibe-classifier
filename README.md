@@ -10,7 +10,7 @@ Instead of just labeling songs as "pop", "rock", etc., this project focuses on t
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 This project uses **Spotify audio features** to group songs into clusters using **KMeans Clustering**.
 
@@ -18,7 +18,7 @@ The final output is a **vibe/segment classification** for each song.
 
 ---
 
-## 🧠 How It Works
+##  How It Works
 
 1. Extract audio features from Spotify
 2. Normalize the data using a scaler
@@ -54,7 +54,7 @@ The model uses the following Spotify audio features:
 
 ## ⚡ API Usage
 
-### 🔹 Base URL
+### Base URL
 
 ```
 http://127.0.0.1:5000
@@ -62,7 +62,7 @@ http://127.0.0.1:5000
 
 ---
 
-### 🔹 GET `/`
+###  GET `/`
 
 Health check endpoint
 
@@ -74,7 +74,7 @@ Health check endpoint
 
 ---
 
-### 🔹 POST `/predict`
+###  POST `/predict`
 
 Predict the vibe of a song based on its audio features
 
@@ -116,7 +116,7 @@ Predict the vibe of a song based on its audio features
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 Install dependencies:
 
@@ -126,7 +126,7 @@ pip install flask pandas scikit-learn joblib
 
 ---
 
-## ▶️ Run Locally
+##  Run Locally
 
 ```bash
 python app.py
@@ -140,14 +140,14 @@ http://127.0.0.1:5000
 
 ---
 
-## 🧪 Example Test
+##  Example Test
 
 ```bash
 curl -X POST http://127.0.0.1:5000/predict \
 -H "Content-Type: application/json" \
 -d @data.json
 ```
-## 📊 Dataset
+##  Dataset
 
 The dataset used in this project is derived from **Spotify audio features**.
 
@@ -179,17 +179,7 @@ This project aims to answer that using a data-driven approach.
 
 ---
 
-## 🔮 Future Improvements
-
-* 🎯 Better cluster labeling (auto-labeling)
-* 📊 Cluster visualization (PCA / t-SNE)
-* 🎵 Input using Spotify track ID
-* 📦 Batch prediction
-* ☁️ Cloud deployment (Render / Railway / AWS)
-
----
-
-## 🧰 Tech Stack
+## Tech Stack
 
 * Python
 * Flask
@@ -199,7 +189,7 @@ This project aims to answer that using a data-driven approach.
 
 ---
 
-## 👀 Notes
+## Notes
 
 This project is still experimental, so:
 
